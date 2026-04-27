@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Collage</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@500;700;900&family=Permanent+Marker&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="noise"></div>
+  <div class="cursor-rip" id="cursorRip" aria-hidden="true"></div>
+
+  <header class="site-header" aria-label="Main navigation">
+    <a class="logo" href="#home" aria-label="Go home">A.</a>
+    <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+    </button>
+    <nav class="site-nav">
+      <a href="#work">Work</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="panel hero" id="home" data-section="home">
+      <div class="punk-lines" aria-hidden="true"></div>
+      <div class="paper hero-paper torn">
+        <p class="stamp">Design</p>
+        <p class="stamp">Develop</p>
+        <p class="stamp accent">Create</p>
+        <p class="intro">I'm a <strong>designer & developer</strong> who builds clean, modern and impactful digital experiences.</p>
+        <a class="btn" href="#work">View my work <span aria-hidden="true">↗</span></a>
+      </div>
+      <figure class="photo hero-photo">
+        <img src="https://images.unsplash.com/photo-1501386761578-eac5c94b800a?auto=format&fit=crop&w=1000&q=80" alt="Concert crowd with stage lights">
+      </figure>
+      <div class="paper scrap scrap-one">Scroll<br>down</div>
+      <div class="paper scrap scrap-two" data-float aria-hidden="true">Pow!</div>
+      <div class="doodle globe" aria-hidden="true"></div>
+      <div class="paper tape tape-one" aria-hidden="true"></div>
+    </section>
+
+    <section class="panel about" id="about" data-section="about">
+      <div class="paper about-copy torn">
+        <p class="eyebrow">About</p>
+        <h1>Me</h1>
+        <p class="hand">A mix of creativity, logic & curiosity.</p>
+        <p>I'm a designer and developer who loves turning ideas into functional, meaningful digital experiences.</p>
+        <p>With a strong focus on user experience and details, I turn ideas into products that look good and work beautifully.</p>
+        <p class="hand ringed">Let's create something amazing together.</p>
+      </div>
+      <figure class="photo portrait">
+        <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=900&q=80" alt="Black and white portrait of a creative person in a jacket">
+      </figure>
+      <div class="stats">
+        <span><strong>5+</strong>Years</span>
+        <span><strong>50+</strong>Projects</span>
+        <span><strong>30+</strong>Clients</span>
+        <span><strong>∞</strong>Passion</span>
+      </div>
+      <span class="doodle star star-one" aria-hidden="true">☆</span>
+      <span class="doodle crown" aria-hidden="true">♕</span>
+    </section>
+
+    <section class="panel work" id="work" data-section="work">
+      <div class="punk-lines pink" aria-hidden="true"></div>
+      <div class="section-title">
+        <h2>My <span>Work</span></h2>
+        <span class="doodle star">☆</span>
+      </div>
+      <div class="filters" aria-label="Project filters">
+        <button class="filter active" type="button" data-filter="all">All</button>
+        <button class="filter" type="button" data-filter="web-design">Web Design</button>
+        <button class="filter" type="button" data-filter="web-development">Web Development</button>
+        <button class="filter" type="button" data-filter="branding">Branding</button>
+        <button class="filter" type="button" data-filter="ui-ux">UI/UX</button>
+      </div>
+      <div class="project-list" id="projectList"></div>
+      <p class="empty-state" id="emptyState" hidden>No projects in this cut. Try another filter.</p>
+      <div class="cta-strip">
+        <strong>Have a project in mind?</strong>
+        <a class="btn small" href="#contact">Let's work together <span aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+
+    <section class="panel detail" id="project" data-section="project">
+      <div class="detail-copy">
+        <a class="back-link" href="#work">← Back to all work</a>
+        <span class="project-num" id="detailNum">01</span>
+        <h2 id="detailTitle">Fincash</h2>
+        <p id="detailText">A sleek dashboard for tracking your finances.</p>
+        <dl>
+          <dt>Role</dt>
+          <dd id="detailRole">UI/UX Design, Web Development</dd>
+          <dt>Tools</dt>
+          <dd id="detailTools">Figma, React, Tailwind CSS</dd>
+          <dt>Year</dt>
+          <dd id="detailYear">2024</dd>
+        </dl>
+        <a class="btn" id="detailLink" href="#contact">Visit project <span aria-hidden="true">↗</span></a>
+      </div>
+      <figure class="photo laptop">
+        <img id="detailImage" src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80" alt="Project preview">
+      </figure>
+      <div class="paper detail-sticker" id="detailSticker" aria-hidden="true">Selected cut</div>
+      <div class="thumb-row" id="thumbRow"></div>
+    </section>
+
+    <section class="panel skills" id="skills" data-section="skills">
+      <div class="section-title stacked">
+        <h2>Skills</h2>
+        <span>My toolbox</span>
+      </div>
+      <div class="toolbox">
+        <div class="tool-group">
+          <h3>Design</h3>
+          <div class="tools" data-tools="Figma,Photoshop,Illustrator,InDesign,After Effects"></div>
+        </div>
+        <div class="tool-group">
+          <h3>Development</h3>
+          <div class="tools" data-tools="HTML,CSS,JavaScript,React,Node.js"></div>
+        </div>
+        <div class="tool-group">
+          <h3>Other</h3>
+          <div class="tools" data-tools="Git,VS Code,Tailwind CSS,Firebase,Vercel"></div>
+        </div>
+      </div>
+      <span class="doodle bolt" aria-hidden="true">ϟ</span>
+      <span class="doodle scratch" aria-hidden="true">×</span>
+    </section>
+
+    <section class="panel contact" id="contact" data-section="contact">
+      <div class="paper contact-title torn">
+        <h2>Let's make something <span>epic.</span></h2>
+      </div>
+      <div class="paper note">
+        <p>I'm always open to new opportunities and exciting collaborations.</p>
+        <p>Let's build something great!</p>
+      </div>
+      <form class="contact-form" id="contactForm">
+        <h3>Send me a message</h3>
+        <label>
+          <span>Your Name</span>
+          <input name="name" type="text" required>
+        </label>
+        <label>
+          <span>Your Email</span>
+          <input name="email" type="email" required>
+        </label>
+        <label>
+          <span>Your Message</span>
+          <textarea name="message" rows="5" required></textarea>
+        </label>
+        <button class="btn" type="submit">Send message <span aria-hidden="true">↗</span></button>
+        <p class="form-status" id="formStatus" role="status"></p>
+      </form>
+      <aside class="contact-info">
+        <h3>Get in touch</h3>
+        <p><strong>Email</strong><br>hello@yourportfolio.com</p>
+        <p><strong>Phone</strong><br>+01 123 456 7890</p>
+        <p><strong>Location</strong><br>Worldwide</p>
+        <div class="socials">
+          <a href="#" aria-label="Website">◎</a>
+          <a href="#" aria-label="Behance">Be</a>
+          <a href="#" aria-label="LinkedIn">in</a>
+          <a href="#" aria-label="GitHub">GH</a>
+        </div>
+      </aside>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
