@@ -24,6 +24,7 @@ body {
   font-family: Inter, system-ui, sans-serif;
   overflow-x: hidden;
   cursor: crosshair;
+  -webkit-text-size-adjust: 100%;
 }
 
 body.menu-open {
@@ -802,7 +803,7 @@ dd {
 .thumb-row {
   grid-column: 1 / -1;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
   gap: 18px;
 }
 
@@ -867,7 +868,7 @@ dd {
 
 .tools {
   display: grid;
-  grid-template-columns: repeat(5, minmax(110px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
   gap: 18px;
 }
 
@@ -1006,6 +1007,38 @@ dd {
   background: var(--paper);
   color: var(--ink);
   font-weight: 900;
+}
+
+@media (max-width: 1100px) {
+  .hero,
+  .about,
+  .detail,
+  .contact {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-photo,
+  .portrait,
+  .laptop {
+    min-height: 320px;
+    height: min(68svh, 620px);
+  }
+
+  .stats {
+    position: static;
+    transform: none;
+    grid-column: 1;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 18px;
+  }
+
+  .contact-title,
+  .contact-form,
+  .contact-info {
+    grid-column: 1;
+    grid-row: auto;
+  }
 }
 
 .reveal {
@@ -1216,6 +1249,33 @@ dd {
 
   .thumb-row img {
     height: 120px;
+  }
+}
+
+@media (hover: none), (pointer: coarse) {
+  body {
+    cursor: default;
+  }
+
+  .cursor-rip,
+  .noise {
+    display: none;
+  }
+
+  .logo:hover,
+  .photo:hover,
+  .btn:hover,
+  .filter:hover,
+  .project-card:hover,
+  .thumb:hover,
+  [data-float]:hover {
+    transform: none;
+    filter: none;
+  }
+
+  .site-nav a::after,
+  .site-nav a.active::before {
+    display: none;
   }
 }
 

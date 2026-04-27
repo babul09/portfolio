@@ -43,7 +43,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const menuButton = document.querySelector('.nav-toggle');
   const tools = document.querySelectorAll('.tools');
   const cursorRip = document.querySelector('#cursorRip');
-  const motionAllowed = !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const motionAllowed = window.matchMedia('(hover: hover) and (pointer: fine)').matches &&
+    !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   let activeProjectId = projects[0].id;
 
   function projectCard(project, index) {
