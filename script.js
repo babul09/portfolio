@@ -1,36 +1,47 @@
 const projects = [
   {
-    id: 'fincash',
+    id: 'ad-analytics',
     num: '01',
-    title: 'Fincash',
-    text: 'A sleek dashboard for tracking your finances.',
-    categories: ['web-design', 'web-development', 'ui-ux'],
-    role: 'UI/UX Design, Web Development',
-    tools: 'Figma, React, Tailwind CSS',
-    year: '2024',
-    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80'
+    title: 'Ad Analytics & User Trends Automation Platform',
+    text: 'Automated ingestion and reporting across ad and user data sources.',
+    categories: ['automation', 'web'],
+    role: 'Data Automation, Trend Analysis, Reporting',
+    tools: 'Python, Selenium, Django, Excel',
+    year: 'Nov 2025',
+    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80'
   },
   {
-    id: 'taskflow',
+    id: 'expendus',
     num: '02',
-    title: 'Taskflow',
-    text: 'Productivity tool that helps you get more done.',
-    categories: ['web-development', 'branding'],
-    role: 'Product Design, Frontend Development',
-    tools: 'Figma, JavaScript, Firebase',
-    year: '2025',
-    image: 'https://images.unsplash.com/photo-1611224923853-80b023f02d71?auto=format&fit=crop&w=1200&q=80'
+    title: 'Expendus: Expense Tracker App',
+    text: 'Flutter app for personal finance with charts, goals, and sync.',
+    categories: ['mobile', 'web'],
+    role: 'Mobile App Development, Data Sync',
+    tools: 'Flutter, Firebase, Hive',
+    year: 'Apr 2025',
+    image: 'https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=1200&q=80'
   },
   {
-    id: 'wanderlust',
+    id: 'interactive-portfolio',
     num: '03',
-    title: 'Wanderlust',
-    text: 'Travel website inspiring users to explore new places.',
-    categories: ['web-design', 'branding', 'ui-ux'],
-    role: 'Art Direction, UI Design',
-    tools: 'Figma, Photoshop, Webflow',
-    year: '2024',
-    image: 'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80'
+    title: 'Interactive Portfolio',
+    text: 'MacOS-inspired interactive dock with 3D particle animations.',
+    categories: ['web', 'graphics'],
+    role: 'Frontend Development, Motion Design',
+    tools: 'React, Vite, Framer Motion, Three.js',
+    year: 'Oct 2024',
+    image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80'
+  },
+  {
+    id: 'opengl-renderer',
+    num: '04',
+    title: '3D OpenGl Renderer',
+    text: 'Simple renderer with model loading, textures, and camera transforms.',
+    categories: ['graphics'],
+    role: 'Computer Graphics, C++ Development',
+    tools: 'C++, ImGui, GLAD, OpenGL',
+    year: 'Jan 2024',
+    image: 'https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=1200&q=80'
   }
 ];
 
