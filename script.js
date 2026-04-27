@@ -45,7 +45,7 @@ const projects = [
   }
 ];
 
-document.addEventListener('DOMContentLoaded', () => {
+window.addEventListener('load', () => {
   const projectList = document.querySelector('#projectList');
   const emptyState = document.querySelector('#emptyState');
   const filters = document.querySelectorAll('.filter');
@@ -81,8 +81,13 @@ document.addEventListener('DOMContentLoaded', () => {
     activeProjectId = project.id;
     const detail = document.querySelector('#project');
     detail.classList.remove('is-swapping');
-    void detail.offsetWidth;
-    detail.classList.add('is-swapping');
+    if (motionAllowed) {
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          detail.classList.add('is-swapping');
+        });
+      });
+    }
 
     document.querySelector('#detailNum').textContent = project.num;
     document.querySelector('#detailTitle').textContent = project.title;
